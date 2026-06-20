@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profit Calculator</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        input { padding: 10px; margin: 10px; }
+        button { padding: 10px 20px; background: green; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>حاسبة الأرباح</h1>
+    <input type="number" id="cost" placeholder="سعر التكلفة">
+    <input type="number" id="price" placeholder="سعر البيع">
+    <button onclick="calculate()">احسب الربح</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function calculate() {
+            let cost = document.getElementById('cost').value;
+            let price = document.getElementById('price').value;
+            let profit = price - cost;
+            document.getElementById('result').innerText = "الربح هو: " + profit;
+        }
+    </script>
+</body>
+</html>
